@@ -1,0 +1,52 @@
+{
+  "id": "eyjafjalla",
+  "name": "艾雅法拉",
+  "aliases": ["Eyjafjalla", "小羊", "火山"],
+  "type": "operator",
+  "rarity": 6,
+  "class": "术师",
+  "branch": "中坚术师",
+  "source": {
+    "name": "PRTS Wiki",
+    "url": "https://prts.wiki/w/艾雅法拉",
+    "updatedAt": "2026-06-03"
+  },
+  "skills": [
+    {
+      "slot": 1,
+      "name": "二重咏唱",
+      "activation": "自动回复 / 手动触发",
+      "spCost": 45,
+      "initialSp": 10,
+      "duration": 25,
+      "effect": "攻击速度提升，第二次及以后开启时额外提升攻击力。"
+    },
+    {
+      "slot": 2,
+      "name": "点燃",
+      "activation": "自动回复 / 自动触发",
+      "spCost": 5,
+      "initialSp": 0,
+      "duration": 0,
+      "effect": "下次攻击造成范围法术伤害并降低目标法术抗性。"
+    },
+    {
+      "slot": 3,
+      "name": "火山",
+      "activation": "自动回复 / 手动触发",
+      "spCost": 80,
+      "initialSp": 55,
+      "duration": 15,
+      "effect": "攻击范围扩大，随机攻击范围内多个敌人，造成高额法术伤害。"
+    }
+  ],
+  "baseSkills": [
+    {
+      "name": "火山学家",
+      "unlock": "精英0",
+      "room": "制造站",
+      "effect": "进驻制造站时，源石类配方生产力提升。"
+    }
+  ],
+  "searchText": "艾雅法拉 Eyjafjalla 小羊 术师 中坚术师 点燃 火山 技能 三技能 制造站"
+}

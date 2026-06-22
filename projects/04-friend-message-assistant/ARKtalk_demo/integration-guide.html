@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ARKtalk 游戏内接入说明</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="guide-page">
+    <main class="integration-doc">
+      <header class="integration-hero">
+        <a href="index.html">返回聊天原型</a>
+        <h1>ARKtalk / PRTS 游戏内接入说明</h1>
+        <p>面向游戏内私信系统与攻略助手的 WebView 接入方案。</p>
+        <a href="portfolio.html">查看作品集说明</a>
+      </header>
+
+      <section>
+        <h2>推荐接入方式</h2>
+        <p>原型阶段采用 WebView 接入：游戏客户端打开同域聊天页，所有好友消息和 PRTS 请求都走后端 API。DeepSeek 密钥仅保存在服务端。</p>
+      </section>
+
+      <section>
+        <h2>接入流程</h2>
+        <ol class="flow-list">
+          <li>游戏客户端向游戏账号服务请求一次性登录票据。</li>
+          <li>客户端打开 WebView：<code>/index.html?token=...</code>。</li>
+          <li>聊天后端校验票据，换取会话 ID。</li>
+          <li>玩家向好友或 PRTS 发送消息。</li>
+          <li>普通私信写入消息服务；PRTS 查询进入 Wiki 检索与 DeepSeek 调度。</li>
+          <li>前端展示文本、表情包、攻略卡片和来源更新时间。</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>系统结构</h2>
+        <div class="architecture-flow">
+          <span>游戏客户端</span>
+          <span>WebView 聊天页</span>
+          <span>聊天 API 网关</span>
+          <span>PRTS Agent</span>
+          <span>Wiki JSON / 搜索索引</span>
+          <span>DeepSeek API</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>接口表</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>接口</th>
+              <th>方法</th>
+              <th>用途</th>
+              <th>请求</th>
+              <th>响应</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>/api/session/exchange</code></td>
+              <td>POST</td>
+              <td>游戏票据换聊天会话</td>
+              <td><code>{ token }</code></td>
+              <td><code>{ sessionId, player }</code></td>
+            </tr>
+            <tr>
+              <td><code>/api/messages</code></td>
+              <td>POST</td>
+              <td>发送好友私信</td>
+              <td><code>{ sessionId, friendId, message }</code></td>
+              <td><code>{ messageId, createdAt }</code></td>
+            </tr>
+            <tr>
+              <td><code>/api/prts/chat</code></td>
+              <td>POST</td>
+              <td>PRTS 攻略查询</td>
+              <td><code>{ message }</code></td>
+              <td><code>{ reply, card, sources }</code></td>
+            </tr>
+            <tr>
+              <td><code>/api/friends</code></td>
+              <td>GET</td>
+              <td>获取好友列表</td>
+              <td><code>{ sessionId }</code></td>
+              <td><code>{ friends }</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>关键边界</h2>
+        <ul>
+          <li>客户端不保存 DeepSeek API Key。</li>
+          <li>PRTS 回答必须携带来源与更新时间。</li>
+          <li>私信、举报、屏蔽、限流由聊天后端统一处理。</li>
+          <li>Wiki 数据先用 JSON 维护，后续可导入 SQLite 和 Meilisearch。</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

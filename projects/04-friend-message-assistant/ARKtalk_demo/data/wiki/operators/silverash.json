@@ -1,0 +1,52 @@
+{
+  "id": "silverash",
+  "name": "银灰",
+  "aliases": ["SilverAsh", "真银斩"],
+  "type": "operator",
+  "rarity": 6,
+  "class": "近卫",
+  "branch": "领主",
+  "source": {
+    "name": "PRTS Wiki",
+    "url": "https://prts.wiki/w/银灰",
+    "updatedAt": "2026-06-03"
+  },
+  "skills": [
+    {
+      "slot": 1,
+      "name": "强力击·γ型",
+      "activation": "攻击回复 / 自动触发",
+      "spCost": 4,
+      "initialSp": 0,
+      "duration": 0,
+      "effect": "下次攻击攻击力提升。"
+    },
+    {
+      "slot": 2,
+      "name": "雪境生存法则",
+      "activation": "自动回复 / 手动触发",
+      "spCost": 5,
+      "initialSp": 0,
+      "duration": 0,
+      "effect": "切换防御姿态，提升生存能力。"
+    },
+    {
+      "slot": 3,
+      "name": "真银斩",
+      "activation": "自动回复 / 手动触发",
+      "spCost": 90,
+      "initialSp": 50,
+      "duration": 30,
+      "effect": "攻击范围扩大，同时攻击多个敌人，攻击力大幅提升。"
+    }
+  ],
+  "baseSkills": [
+    {
+      "name": "喀兰贸易·α",
+      "unlock": "精英0",
+      "room": "贸易站",
+      "effect": "进驻贸易站时，订单效率提升。"
+    }
+  ],
+  "searchText": "银灰 SilverAsh 近卫 领主 真银斩 技能 三技能 贸易站"
+}

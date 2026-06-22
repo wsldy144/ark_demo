@@ -1,0 +1,52 @@
+{
+  "id": "exusiai",
+  "name": "能天使",
+  "aliases": ["Exusiai", "阿能"],
+  "type": "operator",
+  "rarity": 6,
+  "class": "狙击",
+  "branch": "速射手",
+  "source": {
+    "name": "PRTS Wiki",
+    "url": "https://prts.wiki/w/能天使",
+    "updatedAt": "2026-06-03"
+  },
+  "skills": [
+    {
+      "slot": 1,
+      "name": "冲锋模式",
+      "activation": "自动回复 / 自动触发",
+      "spCost": 5,
+      "initialSp": 0,
+      "duration": 0,
+      "effect": "下次攻击变为多连射。"
+    },
+    {
+      "slot": 2,
+      "name": "扫射模式",
+      "activation": "自动回复 / 手动触发",
+      "spCost": 45,
+      "initialSp": 15,
+      "duration": 15,
+      "effect": "攻击变为多连射，适合短时间爆发。"
+    },
+    {
+      "slot": 3,
+      "name": "过载模式",
+      "activation": "自动回复 / 自动触发",
+      "spCost": 30,
+      "initialSp": 20,
+      "duration": 15,
+      "effect": "攻击变为五连射，爆发输出显著提升。"
+    }
+  ],
+  "baseSkills": [
+    {
+      "name": "企鹅物流·α",
+      "unlock": "精英0",
+      "room": "贸易站",
+      "effect": "进驻贸易站时，订单效率提升。"
+    }
+  ],
+  "searchText": "能天使 Exusiai 阿能 狙击 速射手 技能 三技能 过载模式 贸易站"
+}

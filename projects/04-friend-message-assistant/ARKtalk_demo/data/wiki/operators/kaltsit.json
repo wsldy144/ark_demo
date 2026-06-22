@@ -1,0 +1,58 @@
+{
+  "id": "kaltsit",
+  "name": "凯尔希",
+  "aliases": ["Kal'tsit", "凯太后", "Mon3tr"],
+  "type": "operator",
+  "rarity": 6,
+  "class": "医疗",
+  "branch": "医师",
+  "source": {
+    "name": "PRTS Wiki",
+    "url": "https://prts.wiki/w/凯尔希",
+    "updatedAt": "2026-06-03"
+  },
+  "skills": [
+    {
+      "slot": 1,
+      "name": "指令：结构加固",
+      "activation": "自动回复 / 手动触发",
+      "spCost": 30,
+      "initialSp": 10,
+      "duration": 30,
+      "effect": "自身和Mon3tr的防御力提升，凯尔希获得一定物理闪避。"
+    },
+    {
+      "slot": 2,
+      "name": "指令：战术协同",
+      "activation": "自动回复 / 手动触发",
+      "spCost": 25,
+      "initialSp": 10,
+      "duration": 20,
+      "effect": "Mon3tr攻击力提升，攻击变为群体攻击。"
+    },
+    {
+      "slot": 3,
+      "name": "指令：熔毁",
+      "activation": "自动回复 / 手动触发",
+      "spCost": 15,
+      "initialSp": 0,
+      "duration": 20,
+      "effect": "Mon3tr攻击力大幅提升，攻击造成真实伤害，技能结束后损失部分生命。"
+    }
+  ],
+  "baseSkills": [
+    {
+      "name": "战术研讨",
+      "unlock": "精英0",
+      "room": "控制中枢",
+      "effect": "进驻控制中枢时，所有制造站生产力提升。"
+    },
+    {
+      "name": "最高权限",
+      "unlock": "精英2",
+      "room": "控制中枢",
+      "effect": "进驻控制中枢时，所有贸易站订单效率提升。"
+    }
+  ],
+  "searchText": "凯尔希 Kal'tsit 凯太后 Mon3tr 医疗 医师 技能 三技能 指令 熔毁 基建 控制中枢"
+}

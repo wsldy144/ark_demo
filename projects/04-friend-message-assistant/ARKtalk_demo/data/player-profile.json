@@ -1,0 +1,8 @@
+{
+  "playerId": "doctor-demo",
+  "level": 68,
+  "ownedOperators": ["凯尔希", "能天使", "银灰", "艾雅法拉"],
+  "missingOperators": ["史尔特尔"],
+  "preferredRoles": ["医疗", "狙击", "近卫", "术师"],
+  "note": "演示账号：用于展示 PRTS 如何结合玩家已有干员给出建议。"
+}

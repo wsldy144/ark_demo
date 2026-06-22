@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ARKtalk 好友通讯</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="app-shell" aria-label="ARKtalk 好友通讯原型">
+      <section class="phone-frame">
+        <header class="browser-bar">
+          <img class="browser-avatar" src="图片/头像__博士65.png" alt="博士头像">
+          <div class="address-pill">
+            <span class="lock-icon" aria-hidden="true"></span>
+            <span>www.mayertalk.top</span>
+          </div>
+          <button class="icon-button" type="button" aria-label="刷新">↻</button>
+        </header>
+
+        <div class="terminal">
+          <aside class="friend-panel" id="friendPanel">
+            <div class="section-heading">
+              <span>DIALOGUE</span>
+              <strong>好友列表</strong>
+            </div>
+            <a class="integration-link" href="integration-guide.html">游戏内接入说明</a>
+            <a class="integration-link" href="portfolio.html">作品集说明</a>
+            <label class="sr-only" for="friendSearch">搜索好友</label>
+            <input class="friend-search" id="friendSearch" type="search" placeholder="搜索好友">
+
+            <div class="profile-strip">
+              <img src="图片/头像__博士65.png" alt="博士头像">
+              <div>
+                <span class="muted">当前账号</span>
+                <strong>博士</strong>
+              </div>
+            </div>
+
+            <button class="friend-card is-active" type="button" data-friend="kaltsit" data-status="游戏中">
+              <img src="图片/头像_凯尔希.png" alt="凯尔希头像">
+              <span class="friend-copy">
+                <strong>凯尔希</strong>
+                <small>这片大地仍有许多苦难</small>
+              </span>
+              <span class="unread-badge" data-unread>3</span>
+            </button>
+
+            <button class="friend-card" type="button" data-friend="prts" data-status="在线">
+              <img src="图片/PRTS.png" alt="PRTS头像">
+              <span class="friend-copy">
+                <strong>PRTS</strong>
+                <small>资料查询终端已接入</small>
+              </span>
+              <span class="unread-badge" data-unread>1</span>
+            </button>
+
+          </aside>
+
+          <section class="chat-panel" id="chatPanel" aria-live="polite">
+            <div class="section-heading chat-heading">
+              <button class="back-button" id="backButton" type="button" aria-label="返回好友列表">‹</button>
+              <span>DIALOGUE</span>
+              <strong id="chatTitle">凯尔希</strong>
+              <div class="chat-actions" aria-label="会话操作">
+                <button id="pinButton" type="button">置顶</button>
+                <button id="muteButton" type="button">免打扰</button>
+                <button id="deleteButton" type="button">删除会话</button>
+              </div>
+            </div>
+
+            <div class="message-log" id="messageLog">
+              <article class="message-row theirs">
+                <img src="图片/头像_凯尔希.png" alt="凯尔希头像">
+                <p>这片大地</p>
+              </article>
+              <article class="message-row theirs">
+                <img src="图片/头像_凯尔希.png" alt="凯尔希头像">
+                <p>仍有许多苦难</p>
+              </article>
+              <article class="message-row theirs">
+                <img src="图片/头像_凯尔希.png" alt="凯尔希头像">
+                <p>如果你已经准备好，就回复我。</p>
+              </article>
+              <article class="message-row mine">
+                <img src="图片/头像__博士65.png" alt="博士头像">
+                <p>我在。</p>
+              </article>
+            </div>
+
+            <div class="quick-prompts" id="quickPrompts" aria-label="PRTS快捷查询">
+              <button type="button" data-prompt="凯尔希的技能是什么？">查干员技能</button>
+              <button type="button" data-prompt="凯尔希的基建技能是什么？">查基建技能</button>
+              <button type="button" data-prompt="固源岩哪里刷？">查材料掉落</button>
+              <button type="button" data-prompt="没有史尔特尔怎么打？">问配队建议</button>
+              <a href="integration-guide.html">接入说明</a>
+            </div>
+
+            <form class="composer" id="composer">
+              <button class="icon-button toolbar-button" type="button" aria-label="展开">⌃</button>
+              <button class="icon-button toolbar-button" type="button" aria-label="快捷消息">▣</button>
+              <button class="icon-button toolbar-button" id="imageButton" type="button" aria-label="发送图片">▧</button>
+              <button class="icon-button toolbar-button" id="stickerButton" type="button" aria-label="表情包">☺</button>
+              <label class="sr-only" for="messageInput">输入消息</label>
+              <textarea id="messageInput" rows="1" placeholder="Ctrl+Enter 可以快捷发送"></textarea>
+              <button class="send-button" type="submit" aria-label="发送消息">
+                <span>➤</span>
+              </button>
+            </form>
+
+            <section class="sticker-panel" id="stickerPanel" aria-label="表情包面板">
+              <div class="sticker-panel-head">
+                <strong>表情包</strong>
+                <span>点一下就能发出去</span>
+              </div>
+              <div class="sticker-grid" id="stickerGrid"></div>
+            </section>
+
+            <nav class="quick-dock" aria-label="聊天快捷入口">
+              <button class="dock-avatar is-active" type="button" aria-label="凯尔希">
+                <img src="图片/头像_凯尔希.png" alt="">
+              </button>
+              <button class="dock-avatar" type="button" aria-label="博士">
+                <img src="图片/头像__博士65.png" alt="">
+              </button>
+              <button class="dock-avatar" type="button" aria-label="PRTS">
+                <img src="图片/PRTS.png" alt="">
+              </button>
+              <button class="dock-add" type="button" aria-label="添加好友">+</button>
+              <button class="dock-settings" type="button" aria-label="设置">⚙</button>
+            </nav>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="chat-state.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+教程在https://api-docs.deepseek.com/zh-cn/这个网址
+api密钥是：sk-fccab656b599494db3648a58a7dcfe95

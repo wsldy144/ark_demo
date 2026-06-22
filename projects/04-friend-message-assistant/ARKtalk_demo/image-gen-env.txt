@@ -1,0 +1,3 @@
+AHEAPI_API_KEY=sk-ofyeJ0JmVRGRZgEA1qjBU6Pu2sWCSmyUDJzT4hee0srojL3g
+AHEAPI_BASE_URL=https://aheapi.com/v1
+AHEAPI_IMAGE_MODEL=image2

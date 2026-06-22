@@ -1,0 +1,10 @@
+{
+  "currentStage": {
+    "id": "H11-4",
+    "name": "高压测试场",
+    "threat": "高压波次与精英敌人",
+    "failedReason": "缺少稳定爆发与高压治疗窗口"
+  },
+  "currentActivity": "危机合约演示环境",
+  "recommendedRoles": ["爆发输出", "持续治疗", "法术伤害", "阻挡位"]
+}

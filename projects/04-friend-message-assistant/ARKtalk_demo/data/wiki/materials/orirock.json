@@ -1,0 +1,27 @@
+{
+  "id": "orirock",
+  "name": "固源岩",
+  "aliases": ["石头", "源岩"],
+  "type": "material",
+  "rarity": 2,
+  "source": {
+    "name": "PRTS Wiki",
+    "url": "https://prts.wiki/w/固源岩",
+    "updatedAt": "2026-06-03"
+  },
+  "recommendedStages": [
+    {
+      "stage": "1-7",
+      "name": "暴君",
+      "reason": "演示数据：低理智消耗，常用于源岩系材料刷取。",
+      "sanity": 6
+    },
+    {
+      "stage": "S2-12",
+      "name": "窒息",
+      "reason": "演示数据：可作为备选刷取关卡。",
+      "sanity": 15
+    }
+  ],
+  "searchText": "固源岩 石头 源岩 材料 掉落 哪里刷 1-7"
+}

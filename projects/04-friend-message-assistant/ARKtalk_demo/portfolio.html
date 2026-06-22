@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ARKtalk 作品集说明</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="guide-page">
+    <main class="integration-doc">
+      <header class="integration-hero">
+        <a href="index.html">返回聊天原型</a>
+        <h1>ARKtalk：游戏内私信与 AI 攻略助手原型</h1>
+        <p>一个面向游戏内社交系统的产品策划与交互原型，核心角色为 PRTS 攻略查询终端。</p>
+      </header>
+
+      <section>
+        <h2>项目目标</h2>
+        <p>在已有好友系统但缺少私信能力的游戏中，补足一套轻量聊天系统，并将 AI 攻略助手作为特殊好友接入，使玩家可以在游戏内直接查询资料、获得结构化攻略卡片。</p>
+      </section>
+
+      <section>
+        <h2>用户痛点</h2>
+        <ul>
+          <li>玩家需要频繁跳出游戏查询 Wiki、攻略站或社区帖子。</li>
+          <li>普通聊天系统只负责社交，不理解游戏上下文。</li>
+          <li>攻略回答若不可验证，容易误导玩家。</li>
+          <li>高难关卡和养成决策需要结合玩家已有干员，而不是给出不可执行答案。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>核心功能</h2>
+        <div class="portfolio-grid">
+          <article>
+            <h3>好友私信</h3>
+            <p>好友列表、未读数、聊天记录、本地保存、搜索、置顶、免打扰、删除会话。</p>
+          </article>
+          <article>
+            <h3>PRTS AI 好友</h3>
+            <p>以特殊好友形式接入，支持快捷查询、加载态、结构化攻略卡片。</p>
+          </article>
+          <article>
+            <h3>本地 Wiki/RAG</h3>
+            <p>先检索本地 JSON 数据，再调用 DeepSeek 组织冷漠机械风回答。</p>
+          </article>
+          <article>
+            <h3>可验证资料</h3>
+            <p>卡片展示来源和更新时间，降低 AI 幻觉对攻略助手的伤害。</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>AI 架构</h2>
+        <ol class="flow-list">
+          <li>玩家在 PRTS 私信窗口输入问题或点击快捷查询。</li>
+          <li>服务端在本地 Wiki JSON 中检索干员、材料、账号上下文。</li>
+          <li>检索结果被整理为 RAG 参考资料。</li>
+          <li>DeepSeek 根据系统 Prompt 和参考资料生成 PRTS 风格回答。</li>
+          <li>前端同时展示文本回复与结构化攻略卡片。</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>当前演示数据</h2>
+        <p>本原型使用 5 个干员 JSON、1 个材料 JSON 和 1 个模拟玩家档案，验证数据维护方式与卡片生成链路。后续可导入 SQLite、Meilisearch 或真实 Wiki 爬虫索引。</p>
+      </section>
+
+      <section>
+        <h2>迭代路线</h2>
+        <ul>
+          <li>阶段 1：扩展干员、材料、关卡数据结构。</li>
+          <li>阶段 2：加入聊天服务端持久化和真实好友 API。</li>
+          <li>阶段 3：接入游戏账号 token，支持 WebView 内鉴权。</li>
+          <li>阶段 4：建立 Meilisearch 索引，提高中文检索质量。</li>
+          <li>阶段 5：加入反馈系统，持续修正错误攻略回答。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>相关页面</h2>
+        <p><a href="index.html">聊天原型</a> / <a href="data-admin.html">Wiki 数据管理台</a> / <a href="integration-guide.html">游戏内接入说明</a> / <a href="project-review.html">项目复盘</a></p>
+      </section>
+    </main>
+  </body>
+</html>

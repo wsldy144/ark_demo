@@ -1,0 +1,52 @@
+{
+  "id": "surtr",
+  "name": "史尔特尔",
+  "aliases": ["Surtr", "42姐", "黄昏"],
+  "type": "operator",
+  "rarity": 6,
+  "class": "近卫",
+  "branch": "术战者",
+  "source": {
+    "name": "PRTS Wiki",
+    "url": "https://prts.wiki/w/史尔特尔",
+    "updatedAt": "2026-06-03"
+  },
+  "skills": [
+    {
+      "slot": 1,
+      "name": "烈焰魔剑",
+      "activation": "自动回复 / 手动触发",
+      "spCost": 18,
+      "initialSp": 0,
+      "duration": 0,
+      "effect": "下次攻击造成较高法术伤害。"
+    },
+    {
+      "slot": 2,
+      "name": "熔核巨影",
+      "activation": "自动回复 / 手动触发",
+      "spCost": 25,
+      "initialSp": 5,
+      "duration": 20,
+      "effect": "攻击距离增加，攻击力提升，可同时攻击多个目标。"
+    },
+    {
+      "slot": 3,
+      "name": "黄昏",
+      "activation": "自动回复 / 手动触发",
+      "spCost": 5,
+      "initialSp": 0,
+      "duration": 0,
+      "effect": "攻击力、攻击范围和生命上限大幅提升，持续损失生命，适合处理高威胁目标。"
+    }
+  ],
+  "baseSkills": [
+    {
+      "name": "剑术记忆",
+      "unlock": "精英0",
+      "room": "训练室",
+      "effect": "协助位为近卫干员时，专精训练速度提升。"
+    }
+  ],
+  "searchText": "史尔特尔 Surtr 42姐 近卫 术战者 黄昏 技能 三技能 训练室"
+}

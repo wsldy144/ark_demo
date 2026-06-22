@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ARKtalk 项目复盘</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="guide-page">
+    <main class="integration-doc">
+      <header class="integration-hero">
+        <a href="portfolio.html">返回作品集说明</a>
+        <h1>ARKtalk 项目复盘</h1>
+        <p>从游戏内私信缺口出发，设计一个可验证、可接入、可运营的 AI 攻略助手。</p>
+      </header>
+
+      <section>
+        <h2>设计问题</h2>
+        <p>玩家在游戏中遇到养成、关卡、材料问题时，需要跳出游戏寻找攻略。普通私信系统无法理解游戏上下文，普通 AI 聊天又缺少资料来源与可验证性。</p>
+      </section>
+
+      <section>
+        <h2>解决方案</h2>
+        <ul>
+          <li>将 PRTS 设计为好友列表中的特殊 AI 好友，降低接入成本。</li>
+          <li>回答前先检索本地 Wiki 数据，再调用 DeepSeek 组织语言。</li>
+          <li>回答结果以攻略卡片展示，包含来源、更新时间、反馈入口。</li>
+          <li>结合模拟玩家档案和当前关卡上下文，生成更可执行的建议。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>风险控制</h2>
+        <ul>
+          <li>API Key 只保存在服务端，静态页面不可访问。</li>
+          <li>资料不足时返回拒答模板，避免无来源乱答。</li>
+          <li>卡片标注“演示数据 / 导入骨架”，区分可信等级。</li>
+          <li>用户可标记“有用 / 错误”，为后续运营校正提供入口。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>验证方式</h2>
+        <p>当前项目包含 Node 测试覆盖检索、RAG prompt、卡片类型、密钥保护、样式规则和导入脚本。接口冒烟验证覆盖技能、基建、材料、配队四类查询。</p>
+      </section>
+
+      <section>
+        <h2>后续方向</h2>
+        <ul>
+          <li>扩展真实 Wiki 导入脚本，从骨架导入升级为字段解析。</li>
+          <li>引入 SQLite / Meilisearch，提高筛选和中文检索能力。</li>
+          <li>接入游戏账号 token，替换当前模拟玩家档案。</li>
+          <li>加入运营后台，查看错误反馈和高频问题。</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
